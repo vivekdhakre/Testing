@@ -14,12 +14,13 @@ public class CountDownLatchDemo {
         Worker first = new Worker("1st",1000,countDownLatch);
         Worker two = new Worker("2nd",2000,countDownLatch);
         Worker three = new Worker("3rd",3000,countDownLatch);
-//        Worker four = new Worker("4th",4000,countDownLatch);
+        Worker four = new Worker("4th",4000,countDownLatch);
+
 
         first.start();
         two.start();
         three.start();
-//        four.start();
+        four.start();
 
         System.out.println("finished");
         countDownLatch.await();
