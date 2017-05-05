@@ -1,11 +1,3 @@
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  * Created by vivek on 2/2/17.
  */
@@ -39,6 +31,12 @@ public class Test2feb {
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
+        System.out.println(String.class.getClassLoader());
+        System.out.println(Test2feb.class.getClassLoader().getParent().getClass().getName());
+
+
+//        Test2feb t = new Test2feb();
+//        t.method(null);
 
 
 //        Test2feb t = new Test2feb();

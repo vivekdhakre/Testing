@@ -4,7 +4,7 @@ package singleton;
  * Created by vivek on 31/1/17.
  */
 public class Singleton  {
-//    private static Singleton singleton = new Singleton( );
+    private static Singleton singleton = new Singleton( );
 
     private static int i=0;
     /* A private Constructor prevents any other
@@ -14,10 +14,10 @@ public class Singleton  {
         System.out.println("call singleton constructor "+(++i));
     }
 
-    private static class HoldInstance {
-
-        private static Singleton INSTANCE = new Singleton();
-    }
+//    private static class HoldInstance {
+//
+//        private static Singleton INSTANCE = new Singleton();
+//    }
 
     /* Static 'instance' method */
     public static Singleton getInstance( ) {
@@ -25,7 +25,7 @@ public class Singleton  {
         //1--1++1--11+-12=
 
 //        return singleton;
-        return HoldInstance.INSTANCE;
+        return singleton;
     }
 
     /* Other methods protected by singleton-ness */
