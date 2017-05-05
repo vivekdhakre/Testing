@@ -31,8 +31,8 @@ public class Test2feb {
 //        }catch (Exception e){
 //            e.printStackTrace();
 //        }
-        System.out.println(String.class.getClassLoader());
-        System.out.println(Test2feb.class.getClassLoader().getParent().getClass().getName());
+//        System.out.println(String.class.getClassLoader());
+//        System.out.println(Test2feb.class.getClassLoader().getParent().getClass().getName());
 
 
 //        Test2feb t = new Test2feb();
