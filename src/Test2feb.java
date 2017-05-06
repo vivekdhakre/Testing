@@ -1,3 +1,6 @@
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+
 /**
  * Created by vivek on 2/2/17.
  */
@@ -71,7 +74,6 @@ public class Test2feb {
 //        System.out.println("Hex format : " + hexString.toString());
 
     }
-
 
 
     public void method(Object object){
