@@ -1,10 +1,3 @@
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.DoubleSummaryStatistics;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by vivek on 24/12/16.
  */
@@ -12,23 +5,26 @@ public class Test24Dec {
 
     public static void main(String[] args) {
 
+        System.out.print("Y" + "O");
+        System.out.print('L' + 'O');
 
-        List<String> list = new ArrayList<>(1);
-        list.add("Aaa");
-        list.add("Bbb");
 
-        Iterator<String> iterator =list.iterator();
-        while(iterator.hasNext())
-            System.out.println(iterator.next());
-
-        String timeDuration = "14.84";
-        long rounded = Math.round(Double.valueOf(timeDuration));
+//        List<String> list = new ArrayList<>(1);
+//        list.add("Aaa");
+//        list.add("Bbb");
+//
+//        Iterator<String> iterator =list.iterator();
+//        while(iterator.hasNext())
+//            System.out.println(iterator.next());
+//
+//        String timeDuration = "14.84";
+//        long rounded = Math.round(Double.valueOf(timeDuration));
 
        // System.out.println(Math.(Double.valueOf(timeDuration)));
 
-        Double time = 14.84*1000;
-        long millis = Math.round(time);
-        System.out.println(String.format("%1$tH:%1$tM:%1$tS", millis));;
+//        Double time = 14.84*1000;
+//        long millis = Math.round(time);
+//        System.out.println(String.format("%1$tH:%1$tM:%1$tS", millis));;
 //        String hms = String.format("%02d:%02d:%02d,%3d", TimeUnit.MILLISECONDS.toHours(millis),
 //                TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
 //                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
