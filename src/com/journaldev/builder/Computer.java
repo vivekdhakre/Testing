@@ -13,6 +13,13 @@ public class Computer {
     private boolean isGraphicsCardEnabled;
     private boolean isBluetoothEnabled;
 
+    public Computer(ComputerBuilder builder) {
+        this.hdd = builder.hdd;
+        this.ram = builder.ram;
+        this.isGraphicsCardEnabled = builder.isGraphicsCardEnabled;
+        this.isBluetoothEnabled = builder.isBluetoothEnabled;
+    }
+
     public String getHdd() {
         return hdd;
     }
@@ -29,13 +36,6 @@ public class Computer {
         return isBluetoothEnabled;
     }
 
-    public Computer(ComputerBuilder builder){
-        this.hdd=builder.hdd;
-        this.ram=builder.ram;
-        this.isGraphicsCardEnabled=builder.isGraphicsCardEnabled;
-        this.isBluetoothEnabled=builder.isBluetoothEnabled;
-    }
-
     public static class ComputerBuilder{
         //  required parameter
         private String hdd;
@@ -50,33 +50,10 @@ public class Computer {
             this.ram = ram;
         }
 
-        public String getHdd() {
-            return hdd;
-        }
-
-        public void setHdd(String hdd) {
-            this.hdd = hdd;
-        }
-
-        public String getRam() {
-            return ram;
-        }
-
-        public void setRam(String ram) {
-            this.ram = ram;
-        }
-
-        public boolean isGraphicsCardEnabled() {
-            return isGraphicsCardEnabled;
-        }
-
-
-        public boolean isBluetoothEnabled() {
-            return isBluetoothEnabled;
-        }
 
         public ComputerBuilder setGraphicsCardEnabled(boolean isGraphicsCardEnabled) {
             this.isGraphicsCardEnabled = isGraphicsCardEnabled;
+
             return this;
         }
 
