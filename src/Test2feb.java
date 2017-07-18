@@ -1,11 +1,23 @@
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
+interface A1 {
+    void m1();
+}
+
+interface B1 {
+
+}
+
+interface C1 extends A1, B1 {
+
+}
 
 /**
  * Created by vivek on 2/2/17.
  */
 public class Test2feb {
     public static void main(String[] args) throws Exception{
+
+        String type = "Mobile";
+        System.out.println(type.matches("Web|Mobile"));
 
 //        for(int i=0 ; i<10 ; i++){
 //            System.out.println(i);
@@ -44,11 +56,11 @@ public class Test2feb {
 
 //        Test2feb t = new Test2feb();
 //        t.method(null);
-
-        String password = "ahoy123";
-
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
-        byte byteData[] = md.digest(password.getBytes(StandardCharsets.UTF_8));
+//
+//        String password = "ahoy123";
+//
+//        MessageDigest md = MessageDigest.getInstance("SHA-256");
+//        byte byteData[] = md.digest(password.getBytes(StandardCharsets.UTF_8));
 //        md.update(password.getBytes());
 
 //        byte byteData[] = md.digest();
@@ -56,12 +68,12 @@ public class Test2feb {
 
 
         //convert the byte to hex format method 1
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < byteData.length; i++) {
-            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-        }
-
-        System.out.println("Hex format : " + sb.toString());
+//        StringBuffer sb = new StringBuffer();
+//        for (int i = 0; i < byteData.length; i++) {
+//            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+//        }
+//
+//        System.out.println("Hex format : " + sb.toString());
 
 //
 //        //convert the byte to hex format method 2
@@ -85,4 +97,11 @@ public class Test2feb {
         System.out.println("inside method String");
     }
 
+}
+
+class Aa implements C1 {
+    @Override
+    public void m1() {
+
+    }
 }
